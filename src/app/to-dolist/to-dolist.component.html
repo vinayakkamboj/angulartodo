@@ -1,0 +1,9 @@
+<div class="p-7 mt-6">
+    <h2 class="font-semibold text-xl text-center">ADD TO DO</h2>
+    <div class="max-w-sm mx-auto">
+        <app-add-to-do class="p-2"></app-add-to-do>
+        <div *ngFor="let todo of todos">
+            <app-todoitem [todo]="todo" (todoDelete)="deleteTodo"></app-todoitem>
+        </div>
+    </div>
+</div>
